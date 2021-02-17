@@ -1,0 +1,20 @@
+.novel-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+}
+
+.novel-form label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.novel-form input {
+    margin-bottom: 10px;
+}
+
+.novel-form textarea {
+    margin-bottom: 10px;
+}
