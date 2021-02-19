@@ -4,7 +4,12 @@ import './NovelForm.css'
 export default function NovelForm() {
     return (
         <div >
-            <form className="novel-form">
+            <form 
+                className="novel-form" 
+                method="POST" 
+                encType="multipart/form-data"
+                action="localhost:9000/novels/"
+            >
                 <label htmlFor="title">Title:</label>
                 <input type="text" name="title" id="title"/>
                 <label htmlFor="author">Author:</label>
@@ -20,7 +25,12 @@ export default function NovelForm() {
                 <label htmlFor="summary">Summary:</label>
                 <textarea name="summary" rows="10"></textarea>
                 <label htmlFor="book_cover">Book Cover:</label>
-                <input type="file" name="book_cover" id="book_cover"/>
+                <input 
+                    type="file" 
+                    name="book_cover" 
+                    id="book_cover" 
+                    accept="image/*"
+                />
                 <input type="submit"/>
          </form>
         </div>
