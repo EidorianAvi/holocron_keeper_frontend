@@ -6,9 +6,9 @@ export default function NovelForm() {
         <div >
             <form 
                 className="novel-form" 
-                method="POST" 
+                action="localhost:9000/novels"
+                method="post" 
                 encType="multipart/form-data"
-                action="localhost:9000/novels/"
             >
                 <label htmlFor="title">Title:</label>
                 <input type="text" name="title" id="title"/>
