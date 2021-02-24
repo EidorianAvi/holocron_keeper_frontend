@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import './NovelForm.css'
-const  NovelForm = () => {
+
+const GraphicNovelForm = () => {
     return (
         <div >
-            <h2>Novel Form</h2>
+            <h2>Graphic Novel Form</h2>
             <form 
                 className="novel-form" 
                 action="localhost:9000/novels"
@@ -37,4 +38,4 @@ const  NovelForm = () => {
     )
 }
 
-export default NovelForm;
+export default GraphicNovelForm;
