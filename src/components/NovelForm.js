@@ -14,22 +14,22 @@ const  NovelForm = () => {
 
     const handleSubmit = (event) => {
         console.log(event)
-        event.preventDefault();
-        let novel = {
-            title: title,
-            author: author,
-            publisher: publisher,
-            releaseDate: releaseDate,
-            era: era,
-            timeline: timeline,
-            summary: summary,
-            graphicNovel: graphicNovel,
-        }        
-        console.log(novel);
+    //     event.preventDefault();
+    //     let novel = {
+    //         title: title,
+    //         author: author,
+    //         publisher: publisher,
+    //         releaseDate: releaseDate,
+    //         era: era,
+    //         timeline: timeline,
+    //         summary: summary,
+    //         graphicNovel: graphicNovel,
+    //     }        
+    //     console.log(novel);
     }
 
     const handleChange = ({ target }) => {
-        switch(target){
+        switch(target.name){
             case "title":
                 setTitle(target.value);
                 break;
@@ -38,9 +38,22 @@ const  NovelForm = () => {
                 break;
             case "publisher":
                 setPublisher(target.value);
-            default: 
-                console.log("Derrrr")
-                
+                break;
+            case "release_date":
+                setReleaseDate(target.value);
+                break;
+            case "era":
+                setEra(target.value);
+                break;
+            case "timeline":
+                setTimeline(target.value);
+                break;
+            case "summary":
+                setSummary(target.value);
+                break;
+            case "graphic_novel":
+                setGraphicNovel(!graphicNovel);
+                break;
         }
     }
 
