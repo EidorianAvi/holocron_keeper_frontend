@@ -14,18 +14,18 @@ const  NovelForm = () => {
 
     const handleSubmit = (event) => {
         console.log(event)
-    //     event.preventDefault();
-    //     let novel = {
-    //         title: title,
-    //         author: author,
-    //         publisher: publisher,
-    //         releaseDate: releaseDate,
-    //         era: era,
-    //         timeline: timeline,
-    //         summary: summary,
-    //         graphicNovel: graphicNovel,
-    //     }        
-    //     console.log(novel);
+        event.preventDefault();
+        let novel = {
+            title: title,
+            author: author,
+            publisher: publisher,
+            releaseDate: releaseDate,
+            era: era,
+            timeline: timeline,
+            summary: summary,
+            graphicNovel: graphicNovel,
+        }        
+        console.log(novel);
     }
 
     const handleChange = ({ target }) => {
