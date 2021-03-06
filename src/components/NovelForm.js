@@ -65,6 +65,9 @@ const  NovelForm = () => {
                     className="novel-form" 
                     onSubmit={handleSubmit}
                 >  
+                    <label>Graphic Novel:
+                        <input type="radio" id="graphic_novel" name="graphic_novel" checked={!graphicNovel}/>
+                    </label>
                     <label htmlFor="title">Title:</label>
                     <input type="text" name="title" id="title" value={title} onChange={handleChange}/>
                     <label htmlFor="author">Author:</label>
@@ -78,7 +81,7 @@ const  NovelForm = () => {
                     <label htmlFor="timeline">Timeline:</label>
                     <input type="text" name="timeline" id="timeline" value={timeline} onChange={handleChange}/>
                     <label htmlFor="summary">Summary:</label>
-                    <textarea name="summary" rows="10" value={timeline}></textarea>
+                    <textarea name="summary" rows="10" value={summary} onChange={handleChange}></textarea>
                     <label htmlFor="book_cover">Book Cover:</label>
                     <input 
                         type="file" 
