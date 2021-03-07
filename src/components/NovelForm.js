@@ -60,14 +60,11 @@ const  NovelForm = () => {
     return (
         <div >
             <div className="novel-box">
-                <h2>Novel Form</h2>
+                
                 <form 
                     className="novel-form" 
                     onSubmit={handleSubmit}
                 >  
-                    <label>Graphic Novel:
-                        <input type="radio" id="graphic_novel" name="graphic_novel" checked={!graphicNovel}/>
-                    </label>
                     <label htmlFor="title">Title:</label>
                     <input type="text" name="title" id="title" value={title} onChange={handleChange}/>
                     <label htmlFor="author">Author:</label>
