@@ -13,7 +13,6 @@ const  NovelForm = () => {
     const [graphicNovel, setGraphicNovel] = useState(false);
 
     const handleSubmit = (event) => {
-        console.log(event)
         event.preventDefault();
         let novel = {
             title: title,
@@ -24,8 +23,29 @@ const  NovelForm = () => {
             timeline: timeline,
             summary: summary,
             graphicNovel: graphicNovel,
-        }        
-        console.log(novel);
+        }
+
+        fetch("http://localhost:9000/novels", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(novel)
+
+        })
+            .then(clearForm())
+            .then(response => response.json())
+            .then(console.log);
+    }
+
+    const clearForm = () => {
+        setTitle("");
+        setAuthor("");
+        setPublisher("");
+        setReleaseDate("");
+        setEra("");
+        setTimeline("");
+        setSummary("");
     }
 
     const handleChange = ({ target }) => {
